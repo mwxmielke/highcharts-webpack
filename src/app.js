@@ -9,7 +9,7 @@ if (!window.Promise) {
 
 const liveUpdateData = function liveUpdateData() {
     const chart = this
-    const url = 'http://localhost:8080/values.json';
+    const url = 'http://localhost:8080/values.json'
     // Get data
     fetch(url, {})
         .then((response) => {
@@ -33,7 +33,7 @@ const liveUpdateData = function liveUpdateData() {
 Highcharts.stockChart('container', {
     chart: {
         events: {
-            load: liveUpdateData,
+            load: liveUpdateData
         },
     },
     rangeSelector: {
