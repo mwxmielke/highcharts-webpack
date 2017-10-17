@@ -51,7 +51,7 @@ if (isProd) {
         new webpack.optimize.UglifyJsPlugin({beautify: false, comments: false, mangle: { keep_fnames: true }})
     )
 } else {
-    config.devtool = "eval-source-map" // Default development sourcemap
+    config.devtool = "source-map" // Default development sourcemap
 }
 
 module.exports = config
