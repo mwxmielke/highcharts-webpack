@@ -13,6 +13,7 @@ const liveUpdateData = function liveUpdateData() {
     // Get data
     fetch(url, {})
         .then((response) => {
+
             if (response.status >= 200 && response.status < 300) {
                 return response
             }
@@ -20,6 +21,8 @@ const liveUpdateData = function liveUpdateData() {
             const error = new Error(response.statusText)
             error.response = response
             throw error
+
+
         }).then(response => response.json())
         .then((data) => {
             // Update chart
@@ -33,7 +36,7 @@ const liveUpdateData = function liveUpdateData() {
 Highcharts.stockChart('container', {
     chart: {
         events: {
-            load: liveUpdateData,
+            load: liveUpdateData
         },
     },
     rangeSelector: {
