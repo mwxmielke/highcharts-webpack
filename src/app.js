@@ -9,7 +9,7 @@ if (!window.Promise) {
 
 const liveUpdateData = function liveUpdateData() {
     const chart = this
-    const url = 'http://localhost:8080/values.json'
+    const url = 'http://localhost:8080/values.json';
     // Get data
     fetch(url, {})
         .then((response) => {
@@ -47,6 +47,6 @@ Highcharts.stockChart('container', {
         data: [0],
         tooltip: {
             valueDecimals: 2,
-        }
+        },
     }],
 })

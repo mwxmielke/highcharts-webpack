@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --port 3000",
     "lint": "npm run lint:eslint -- src",
     "lint:eslint": "eslint",
-    "precommit": "lint-staged"
+    "lint:staged": "lint-staged"
   },
   "babel": {
     "presets": [
@@ -26,6 +26,7 @@
   "lint-staged": {
     "*.js": "lint:eslint"
   },
+  "pre-commit": "lint:staged",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb-base",
