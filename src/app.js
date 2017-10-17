@@ -33,7 +33,7 @@ const liveUpdateData = function liveUpdateData() {
 Highcharts.stockChart('container', {
     chart: {
         events: {
-            load: liveUpdateData
+            load: liveUpdateData,
         },
     },
     rangeSelector: {
